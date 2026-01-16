@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鏟齒散熱片製造工藝細部說明</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --industrial-dark: #121212;
+            --industrial-accent: #f59e0b;
+            --industrial-gray: #262626;
+            --metal-gradient: linear-gradient(145deg, #2e2e2e, #121212);
+        }
+
+        body {
+            background-color: var(--industrial-dark);
+            color: #e5e7eb;
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .industrial-border {
+            border-left: 4px solid var(--industrial-accent);
+        }
+
+        .card {
+            background: var(--metal-gradient);
+            border: 1px solid #333;
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.6);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--industrial-accent);
+            transform: translateY(-2px);
+        }
+
+        h1, h2, h3 {
+            letter-spacing: 0.05em;
+        }
+
+        .step-number {
+            font-family: 'Roboto Mono', monospace;
+            color: var(--industrial-accent);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn-industrial {
+            background-color: var(--industrial-accent);
+            color: #000;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 0px #b45309;
+        }
+
+        .btn-industrial:hover {
+            background-color: #fbbf24;
+            transform: translateY(2px);
+            box-shadow: 0 2px 0px #b45309;
+        }
+
+        .btn-industrial:active {
+            transform: translateY(4px);
+            box-shadow: 0 0px 0px #b45309;
+        }
+
+        .product-img {
+            border: 1px solid #444;
+            filter: grayscale(20%);
+            transition: filter 0.3s ease;
+        }
+
+        .product-img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* 捲軸美化 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--industrial-accent); }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <header class="max-w-5xl mx-auto mb-12 border-b border-gray-800 pb-6">
+        <h1 class="text-4xl font-bold text-white mb-2 italic tracking-tighter">TECHNICAL SPECIFICATION</h1>
+        <p class="text-amber-500 text-xl font-light">Skived Fin Manufacturing Process | 鏟齒散熱片工藝細部說明 V2.1</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto">
+        
+        <!-- 簡介 -->
+        <section class="mb-12">
+            <div class="industrial-border bg-zinc-900 p-6 rounded-r-lg mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-white">工藝概述 (Process Overview)</h2>
+                <p>
+                    鏟齒（Skiving）工藝是一種精密機械加工技術，透過特製的鏟齒刀具，以高壓將整塊金屬（通常為銅或鋁）依照設定的間距與高度，精確地切削出一片片垂直立起的散熱鰭片。這種工藝最大的優點在於鰭片與基底為 <strong>同一材質一體成型</strong>，無須任何焊接或導熱膏，導熱效率極高。
+                </p>
+            </div>
+            
+            <!-- 加入產品圖片 -->
+            <div class="flex justify-center mb-12">
+                <div class="max-w-2xl card p-2 rounded-lg">
+                    <img src="https://cdn.ready-market.com.tw/1629767e/Templates/pic/IMG-SKIVED-FIN-1.jpg?v=4cc3f2c4" 
+                         alt="[鏟齒散熱片產品圖]" 
+                         class="rounded product-img w-full h-auto">
+                    <p class="text-center text-xs text-gray-500 mt-2 italic font-mono uppercase tracking-widest">Fig 1.0 - High-Density Skived Fin Heat Sink Structure</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技術流程圖 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            
+            <!-- 步驟 1 -->
+            <div class="card p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <span class="step-number mr-4">01.</span>
+                    <h3 class="text-xl font-bold text-white">材料準備 (Material Preparation)</h3>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    選用高純度的鋁板（如 1060、6063）或銅板（如 C1100）。材料必須經過退火處理以確保韌性，避免在切削過程中發生斷裂。
+                </p>
+            </div>
+
+            <!-- 步驟 2 -->
+            <div class="card p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <span class="step-number mr-4">02.</span>
+                    <h3 class="text-xl font-bold text-white">進給與定位 (Feeding & Clamping)</h3>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    金屬板材被固定在鏟齒機台的精密滑軌上。機台會根據參數自動控制進給速度，精度需達到 ±0.05 mm。
+                </p>
+            </div>
+
+            <!-- 步驟 3: 黃色按鈕形式影片連結 -->
+            <div class="card p-6 rounded-lg border-l-4 border-amber-500 md:col-span-2">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-4">
+                            <span class="step-number mr-4 text-amber-500">03.</span>
+                            <h3 class="text-xl font-bold text-white">核心切削過程 (Skiving Action)</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">
+                            特殊角度的鏟刀向下切入基材一定深度，然後水平推移。金屬受力產生塑性變形並向上捲曲。此動作一次完成一片鰭片。
+                        </p>
+                        <div class="bg-black/30 p-4 rounded text-xs text-amber-400 font-mono inline-block">
+                            > 切削壓力控制: High Pressure<br>
+                            > 變形係數: Optimized
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="https://youtu.be/ghrjJ1OL6jM" target="_blank" class="btn-industrial">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                            觀看加工演示影片
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 步驟 4 -->
+            <div class="card p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <span class="step-number mr-4">04.</span>
+                    <h3 class="text-xl font-bold text-white">鰭片校正 (Fin Alignment)</h3>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    切削後的鰭片會呈傾斜角度，需透過同步壓板將其垂直化，確保頂端平整以利風扇安裝。
+                </p>
+            </div>
+        </div>
+
+        <!-- 技術優勢 -->
+        <section class="mb-12 bg-zinc-900 p-8 rounded-lg shadow-inner">
+            <h2 class="text-2xl font-bold mb-6 text-amber-500 flex items-center">
+                核心技術優勢
+            </h2>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <span class="text-amber-500 mr-2">▶</span>
+                    <div>
+                        <strong class="text-white">極高的散熱面積：</strong> 
+                        鰭片可以做得極薄（最小 0.1 mm）且間距極密（最小 0.2 mm）。
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-amber-500 mr-2">▶</span>
+                    <div>
+                        <strong class="text-white">零熱阻連接：</strong> 
+                        一體成型設計，排除焊接熱阻，導熱係數維持最高。
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 注意事項 -->
+        <section class="mb-12 border-2 border-dashed border-gray-800 p-6">
+            <h3 class="text-xl font-bold mb-4 text-white">工藝限制</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-400">
+                <div>
+                    <h4 class="text-amber-500 font-bold mb-2">高度限制</h4>
+                    鰭片高度通常不超過 100 mm，避免根部因應力斷裂。
+                </div>
+                <div>
+                    <h4 class="text-amber-500 font-bold mb-2">材料損耗</h4>
+                    需配合冷卻液循環系統清理金屬碎屑並降溫。
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-5xl mx-auto mt-20 pb-10 text-center text-gray-600 border-t border-gray-800 pt-8">
+        <p>© 2026 CREATED BY RANDY CHEN</p>
+    </footer>
+
+    <script>
+        // 禁止右鍵功能
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            console.warn("系統提示：右鍵選單已被禁用。");
+        });
+
+        // 防止使用者嘗試透過 F12 鍵盤快捷鍵
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123) {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
